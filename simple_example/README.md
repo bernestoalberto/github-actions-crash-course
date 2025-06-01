@@ -1,2 +1,2 @@
 # This is a practice repo
-### github-crash-course
+### github-actions-crash-course
