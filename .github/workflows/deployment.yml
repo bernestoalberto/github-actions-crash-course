@@ -1,7 +1,7 @@
 name: Test Project
 on: push
 jobs:
-  first-job:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
@@ -15,6 +15,7 @@ jobs:
       - name: Run tests
         run: npm test
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Get code
@@ -29,4 +30,3 @@ jobs:
         run: npm run build
       - name: Deploy
         run: echo "Deploying..."
-        
