@@ -3,7 +3,7 @@ on: push
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: ${{github.repository == 'github-actions-crash-course/second-project'}}
+    if: ${{github.repository == 'github-actions-crash-course/tree/main/second-projectD3u1m@t@'}}
     steps:
       - name: Get code
         uses: actions/checkout@v3

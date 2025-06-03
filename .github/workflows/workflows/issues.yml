@@ -1,0 +1,11 @@
+name: Handle issues
+on:
+  issues:
+    types: [opened, edited, deleted]
+jobs:
+  output-info:
+    runs-on: ubuntu-latest
+    if: ${{github.repository == 'github-actions-crash-course/tree/main/second-project'}}
+    steps:
+      - name: Output event details
+        run: echo "${{ toJSON(github.event) }}"
