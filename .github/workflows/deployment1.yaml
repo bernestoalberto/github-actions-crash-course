@@ -3,6 +3,7 @@ on: push
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: github.repository == 'github-actions-crash-course/second-project'
     steps:
       - name: Get code
         uses: actions/checkout@v3

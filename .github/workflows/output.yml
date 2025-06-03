@@ -3,6 +3,7 @@ on: workflow_dispatch
 jobs:
   info:
     runs-on: ubuntu-latest
+    if: github.repository == 'github-actions-crash-course/basic-project' # Replace OWNER with the actual repository owner
     steps:
       - name: Output GitHub context
         run: echo "${{ toJSON(github) }}"
