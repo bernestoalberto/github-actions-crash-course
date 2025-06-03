@@ -5,7 +5,7 @@ on:
 jobs:
   output-info:
     runs-on: ubuntu-latest
-    if: ${{github.repository == 'github-actions-crash-course/second-project'}}
+    if: ${{github.repository == 'github-actions-crash-course/tree/main/second-project'}}
     steps:
       - name: Output event details
         run: echo "${{ toJSON(github.event) }}"
