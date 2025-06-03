@@ -1,0 +1,32 @@
+name: Test Project
+on: push
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Install NodeJs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Istall dependencies
+        run: npm ci
+      - name: Run tests
+        run: npm test
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v4
+      - name: Install NodeJs
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Istall dependencies
+        run: npm ci
+      - name: Build project
+        run: npm run build
+      - name: Deploy
+        run: echo "Deploying..."
+        
