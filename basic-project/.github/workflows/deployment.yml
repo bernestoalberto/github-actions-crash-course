@@ -3,7 +3,6 @@ on: [push, workflow_dispatch]
 jobs:
   test:
     runs-on: ubuntu-latest
-    if: github.repository == 'github-actions-crash-course/basic-project'
     steps:
       - name: Get code
         uses: actions/checkout@v4
@@ -18,7 +17,6 @@ jobs:
   deploy:
     needs: test
     runs-on: ubuntu-latest
-    if: github.repository == 'github-actions-crash-course/basic-project'
     steps:
       - name: Get code
         uses: actions/checkout@v4

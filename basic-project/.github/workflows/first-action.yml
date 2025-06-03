@@ -2,8 +2,7 @@ name: First Workflow
 on: workflow_dispatch
 jobs:
   first-job:
-    runs-on: ubuntu-latest
-    if: github.repository == 'github-actions-crash-course/basic-project' # Replace OWNER with the actual repository owner
+    runs-on: ubuntu-latestthe actual repository owner
     steps:
       - name: Print greeting
         run: echo "Hello World!"
